@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { TikTok_Sans } from "next/font/google";
 
+const tiktok = TikTok_Sans({
+  subsets: ["latin"],
+  weight: ["700"],
+})
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${tiktok.className} antialiased`}
       >
         {children}
       </body>

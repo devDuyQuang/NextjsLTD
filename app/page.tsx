@@ -1,15 +1,19 @@
-import Header from "../components/Header";
+// app/page.tsx
+import InfoSection from "@/components/Home/InfoSection";
+import Header from "../components/Header/Header";
+import Nav from "../components/Header/Nav";
+import Main from "@/components/Home/Main";
 
 export default function Page() {
   return (
     <>
       <Header />
-
-      {/* Tạm thời để một đoạn text test bên dưới */}
-      <main className="max-w-[1140px] mx-auto mt-8">
-        <h1 className="text-2xl font-bold text-center">
-          Trang chủ Led Thái Dương (Next.js + Tailwind)
-        </h1>
+      <Nav />
+      <InfoSection />
+      <Main />
+      <main className="container-web mt-8">
+        {/* Tạm để trống, lát nữa làm phần product/main sau */}
+        {/* <h1 className="text-2xl font-bold">Trang chủ Led Thái Dương</h1> */}
       </main>
     </>
   );

@@ -1,17 +1,17 @@
-// app/components/Header.tsx
+// app/components/Header/Header.tsx
 
 export default function Header() {
     return (
         <header className="w-full">
             {/* HEADER TOP */}
             <div
-                className="w-full py-2 text-white capitalize bg-cover bg-repeat-x" // muốn ảnh lặp đi nhiều lần theo bề ngang sài bg-repeat-x
+                className="w-full py-2 text-white capitalize bg-repeat-x"
                 style={{
                     backgroundImage: "url('/images/bg-header-top.jpg')",
-                    backgroundSize: "auto"
+                    backgroundSize: "auto",
                 }}
             >
-                <div className="max-w-[1140px] mx-auto flex items-center justify-between px-4">
+                <div className="container-web flex items-center justify-between px-4">
                     {/* Text chào mừng */}
                     <p className="text-[#00ff0f] text-sm text-center">
                         Chào mừng bạn đã đến với Website của chúng tôi!
@@ -57,60 +57,44 @@ export default function Header() {
 
             {/* HEADER BOTTOM */}
             <div className="w-full py-5">
-                <div className="max-w-[1140px] mx-auto flex items-center px-4 gap-4">
-                    {/* Logo */}
-                    <div className="w-1/4">
-                        <img
-                            src="/images/image.png"
-                            alt="logo"
-                            className="w-[200px] h-auto"
-                        />
+                <div className="max-w-[1140px] mx-auto flex items-center px-4 gap-6">
+
+                    {/* Logo (kích thước theo ảnh gốc) */}
+                    <div className="shrink-0">
+                        <img src="/images/image.png" className="w-[200px] h-auto" />
                     </div>
 
-                    {/* Ô search */}
-                    <div className="flex-1">
-                        <div className="flex w-4/5 mx-auto">
+                    {/* Search: chiếm toàn bộ phần còn lại */}
+                    <div className="flex-1 flex justify-center">
+                        <div className="flex w-full max-w-[600px]">
                             <input
                                 type="search"
                                 placeholder="Nhập từ khóa tìm kiếm"
-                                className="w-full h-[50px] rounded-l-full border-2 border-[rgb(49,166,49)] px-4 outline-none"
+                                className="w-full h-[50px] border-2 border-[#31A631] rounded-l-[30px] px-4 outline-none"
                             />
                             <button
-                                type="submit"
-                                className="bg-[rgb(49,166,49)] px-5 border border-[rgb(59,190,59)] rounded-r-full flex items-center justify-center w-[90px]"
+                                className="bg-[#31A631] w-[70px] flex items-center justify-center rounded-r-[30px] border border-[#3BBE3B]"
                             >
-                                <img
-                                    src="/images/search.png"
-                                    alt="search"
-                                    className="w-[30px] h-auto"
-                                />
+                                <img src="/images/search.png" className="w-[28px]" />
                             </button>
                         </div>
                     </div>
 
-                    {/* Hotline + Email */}
-                    <div className="w-1/4 flex flex-col items-start ml-auto text-[16px] text-[#333]">
+                    {/* Hotline */}
+                    <div className="flex flex-col justify-center text-[15px] text-[#333] shrink-0 ml-4">
                         <div className="flex items-center mb-1">
-                            <img
-                                src="/images/call.png"
-                                alt="phone"
-                                className="w-[15px] mr-2 mb-[3px]"
-                            />
+                            <img src="/images/call.png" className="w-[15px] mr-2" />
                             <span>Hotline: 016. 5904. 1977</span>
                         </div>
                         <div className="flex items-center">
-                            <img
-                                src="/images/email.png"
-                                alt="email"
-                                className="w-[15px] mr-2 mb-[3px]"
-                            />
+                            <img src="/images/email.png" className="w-[15px] mr-2" />
                             <span>Email: ledthaiduong@gmail.com</span>
                         </div>
                     </div>
+
                 </div>
             </div>
 
-            {/* NAV + SLIDE + INFO: có thể tách thành component riêng sau */}
         </header>
     );
 }
