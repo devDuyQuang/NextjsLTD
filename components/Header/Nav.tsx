@@ -25,12 +25,10 @@ export default function Nav() {
 
     return (
         <nav className="w-full mt-2">
-
-            <div className="container-web flex items-center">
-
+            <div className="container-web flex flex-col md:flex-row md:items-center gap-3 md:gap-0 px-4 md:px-0">
                 {/* CỘT TRÁI - DỊCH XUỐNG THẤP HƠN */}
-                <div className="relative group mt-4">
-                    <div className="bg-[#32cc33] h-[40px] w-[270px] px-5 flex items-center gap-3 rounded-t-[18px] shadow cursor-pointer">
+                <div className="relative group mt-4 w-full md:w-auto">
+                    <div className="bg-[#32cc33] h-[40px] w-full md:w-[270px] px-5 flex items-center gap-3 rounded-t-[18px] shadow cursor-pointer">
                         <Image
                             src="/images/menu.png"
                             alt="menu icon"
@@ -38,18 +36,18 @@ export default function Nav() {
                             height={22}
                             className="shrink-0"
                         />
-                        <span className="text-white text-[16px] font-semibold uppercase whitespace-nowrap">
+                        <span className="text-white text-[14px] sm:text-[16px] font-semibold uppercase whitespace-nowrap">
                             Danh Mục Sản Phẩm
                         </span>
                     </div>
 
-                    <ul className="absolute left-0 top-full w-[270px] bg-white shadow-xl border border-gray-300 hidden group-hover:block z-50 rounded-none">
+                    <ul className="absolute left-0 top-full w-full md:w-[270px] bg-white shadow-xl border border-gray-300 hidden group-hover:block z-50 rounded-none">
                         {categories.map((item, index) => (
                             <li
                                 key={index}
-                                className={` px-6 py-3 text-[13px] uppercase  border-b border-dotted border-gray-300 hover:bg-[#32cc33] 
-                                            hover:text-white cursor-pointer
-                                            ${index === categories.length - 1 ? "border-b-0" : ""}`}
+                                className={`px-6 py-3 text-[13px] uppercase border-b border-dotted border-gray-300 hover:bg-[#32cc33] 
+                  hover:text-white cursor-pointer
+                  ${index === categories.length - 1 ? "border-b-0" : ""}`}
                             >
                                 {item}
                             </li>
@@ -58,13 +56,13 @@ export default function Nav() {
                 </div>
 
                 {/* MENU BÊN PHẢI – DỊCH LÊN CAO HƠN */}
-                <div className="flex-1 flex items-start h-[10px] ml-10">
-                    <ul className="flex flex-wrap gap-8 text-[18px] font-semibold uppercase">
+                <div className="flex-1 flex items-start h-auto md:h-[10px] ml-0 md:ml-10">
+                    <ul className="flex flex-wrap gap-4 sm:gap-6 md:gap-8 text-[14px] sm:text-[16px] md:text-[18px] font-semibold uppercase">
                         {mainMenu.map((item, idx) => (
                             <li key={idx}>
                                 <a
                                     href="#"
-                                    className="text-[#444] border-b-2 border-transparent pb-1 hover:text-[#32cc33] hover:border-[#8ed642] transition-colors"
+                                    className="text-[#444] border-b-2 border-transparent pb-1 hover:text-[#32cc33] hover:border-[#8ed642] transition-colors whitespace-nowrap"
                                 >
                                     {item}
                                 </a>
@@ -78,7 +76,7 @@ export default function Nav() {
                 <img
                     src="/images/nav-img.png"
                     alt="nav"
-                    className="w-full min-h-[400px] object-cover"
+                    className="w-full min-h-[220px] sm:min-h-[300px] md:min-h-[400px] object-cover"
                 />
             </div>
         </nav>

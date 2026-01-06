@@ -13,10 +13,7 @@ export default function Page() {
       <InfoSection />
       <Main />
       <Footer />
-      <main className="container-web mt-8">
-        {/* Tạm để trống, lát nữa làm phần product/main sau */}
-        {/* <h1 className="text-2xl font-bold">Trang chủ Led Thái Dương</h1> */}
-      </main>
+
     </>
   );
 }

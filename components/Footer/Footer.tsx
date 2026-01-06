@@ -1,10 +1,9 @@
 export default function Footer() {
     return (
         <footer className="bg-[#2a2a2a] text-[#ccc] text-[14px] leading-[2] mt-10">
-
             {/* MENU NGANG */}
             <div className="footer__nav bg-[#2a2a2a] text-center py-3">
-                <ul className="flex flex-wrap justify-center gap-8 uppercase font-bold">
+                <ul className="flex flex-wrap justify-center gap-3 sm:gap-5 md:gap-8 uppercase font-bold text-[12px] sm:text-[13px] md:text-[14px] px-4">
                     {[
                         "Trang Chủ",
                         "Giới Thiệu",
@@ -15,7 +14,7 @@ export default function Footer() {
                         "Liên Hệ",
                     ].map((item, i) => (
                         <li key={i}>
-                            <a href="#" className="text-white no-underline">
+                            <a href="#" className="text-white no-underline whitespace-nowrap">
                                 {item}
                             </a>
                         </li>
@@ -24,12 +23,11 @@ export default function Footer() {
             </div>
 
             {/* 4 CỘT */}
-            <div className="footer__top py-10">
+            <div className="footer__top py-8 sm:py-10">
                 <div className="max-w-[1140px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4">
-
                     {/* Cột 1 */}
                     <div>
-                        <h3 className="text-white text-[16px] mb-5 uppercase">
+                        <h3 className="text-white text-[15px] sm:text-[16px] mb-4 sm:mb-5 uppercase">
                             LED THÁI DƯƠNG
                         </h3>
                         <p>Địa Chỉ: 183 Nguyễn Kim, Quận 10, Tp. Hồ Chí Minh.</p>
@@ -40,7 +38,7 @@ export default function Footer() {
 
                     {/* Cột 2 */}
                     <div>
-                        <h3 className="text-white text-[16px] mb-5 uppercase">
+                        <h3 className="text-white text-[15px] sm:text-[16px] mb-4 sm:mb-5 uppercase">
                             CHÍNH SÁCH
                         </h3>
                         <ul className="space-y-2">
@@ -48,7 +46,7 @@ export default function Footer() {
                                 "Chính Sách Mua Hàng",
                                 "Chính Sách Thanh Toán",
                                 "Chính Sách Đổi Trả",
-                                "Hướng Dẫn Mua Hàng"
+                                "Hướng Dẫn Mua Hàng",
                             ].map((p, i) => (
                                 <li key={i} className="relative pl-4">
                                     <span className="absolute left-0 top-0 text-white">•</span>
@@ -60,7 +58,9 @@ export default function Footer() {
 
                     {/* Cột 3 - Fanpage */}
                     <div>
-                        <h3 className="text-white text-[16px] mb-5 uppercase">FANPAGE</h3>
+                        <h3 className="text-white text-[15px] sm:text-[16px] mb-4 sm:mb-5 uppercase">
+                            FANPAGE
+                        </h3>
                         <img
                             src="/images/footer.png"
                             alt="Fanpage LED Thái Dương"
@@ -70,7 +70,7 @@ export default function Footer() {
 
                     {/* Cột 4 */}
                     <div>
-                        <h3 className="text-white text-[16px] mb-5 uppercase">
+                        <h3 className="text-white text-[15px] sm:text-[16px] mb-4 sm:mb-5 uppercase">
                             THÔNG TIN LIÊN HỆ
                         </h3>
                         <p>
@@ -88,16 +88,15 @@ export default function Footer() {
 
             {/* FOOTER BOTTOM */}
             <div className="footer__bottom bg-[#111] py-3">
-                <div className="max-w-[1140px] mx-auto px-4 flex justify-between flex-wrap text-white">
-                    <p className="text-[15px]">
+                <div className="max-w-[1140px] mx-auto px-4 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 text-white text-center sm:text-left">
+                    <p className="text-[13px] sm:text-[15px]">
                         © Copyright 2016, LED THAI DUONG Allright Reserved
                     </p>
-                    <p className="design-by text-[15px] italic">
+                    <p className="design-by text-[13px] sm:text-[15px] italic">
                         Design by Thiết Kế Web Uy Tín
                     </p>
                 </div>
             </div>
-
         </footer>
     );
 }
