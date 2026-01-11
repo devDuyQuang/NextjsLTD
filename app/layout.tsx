@@ -32,12 +32,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${tiktok.className} antialiased`}
-      >
+    <html lang="en" style={{ colorScheme: "light" }}>
+      <body className={`${tiktok.className} antialiased`}>
         {children}
       </body>
     </html>
   );
+
 }
