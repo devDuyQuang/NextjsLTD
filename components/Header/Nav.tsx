@@ -26,7 +26,6 @@ export default function Nav() {
     return (
         <nav className="w-full mt-2">
             <div className="container-web flex flex-col md:flex-row md:items-center gap-3 md:gap-0 px-4 md:px-0">
-                {/* CỘT TRÁI - DỊCH XUỐNG THẤP HƠN */}
                 <div className="relative group mt-4 w-full md:w-auto">
                     <div className="bg-[#32cc33] h-[40px] w-full md:w-[270px] px-5 flex items-center gap-3 rounded-t-[18px] shadow cursor-pointer">
                         <Image
@@ -54,8 +53,6 @@ export default function Nav() {
                         ))}
                     </ul>
                 </div>
-
-                {/* MENU BÊN PHẢI – DỊCH LÊN CAO HƠN */}
                 <div className="flex-1 flex items-start h-auto md:h-[10px] ml-0 md:ml-10">
                     <ul className="flex flex-wrap gap-4 sm:gap-6 md:gap-8 text-[14px] sm:text-[16px] md:text-[18px] font-semibold uppercase">
                         {mainMenu.map((item, idx) => (
